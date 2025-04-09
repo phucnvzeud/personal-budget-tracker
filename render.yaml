@@ -2,11 +2,11 @@ services:
   - type: web
     name: personal-budget-tracker
     env: node
-    buildCommand: npm ci && npm run build
+    buildCommand: npm install --legacy-peer-deps && npm run build
     startCommand: npm start
     envVars:
       - key: NODE_ENV
         value: production
       - key: CI
         value: false
-    nodeVersion: 18 
+    nodeVersion: 16 
